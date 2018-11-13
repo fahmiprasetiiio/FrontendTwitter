@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>SignUp on Twiiter</title>
+    <link rel="icon" type="image/icon" href="gambar/twitter.png">
+    <link rel="stylesheet" type="text/css" href="css/style-login.css">
+    <script src="js/main.js"></script>
+
+</head>
+
+<body>
+
+    <header>
+        <!-- navigasi -->
+        <ul>
+            <li><a href=""><img src="gambar/twitter.png" width="30px" height="30px"> Home</a></li>
+            <li><a href="">About</a></li>
+        </ul>
+    </header>
+
+    <!-- box login -->
+
+    <div id="box-signup">
+        <form onsubmit="event.preventDefault(); signUp()">
+            <div id="box-form">
+                <h2>SignUp on Twitter</h2>
+                <p><input type="text" class="inputan" id="name" placeholder="User Name"></p>
+                <p><input type="text" class="inputan" id="fullname" placeholder="Full name"></p>
+                <p><input type="text" class="inputan" id="email" placeholder="Email"></p>
+                <p><input type="password" class="inputan" id="password" placeholder="Password"></p>
+                <p><input type="text" class="inputan" id="bio" placeholder="Biography"></p>
+                <p><input type="text" class="inputan" id="photoprofile" placeholder="Photo Profile"></p>
+
+                <button>Sign Up</button>
+
+                <input type="checkbox"> I Agree
+            </div>
+        </form>
+
+        <div id="box-footer">
+            <div class="footer-signup">
+                <p>By signing up, you agree to the <a href="">Terms of Service </a> and
+                    <a href="">Privacy Policy</a>, including <a href="">Cookies Use.</a>
+                    Others will be able to find you by email or phone number when provided.
+                    <a href="">Privacy Options</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>

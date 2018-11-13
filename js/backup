@@ -1,0 +1,61 @@
+function klik() {
+    alert("ini sudah jalan")
+}
+
+function signUp(){
+    //debugger
+    var fullname, name, email, password;
+    name = document.getElementById('name').value;
+    email = document.getElementById('email').value;
+    fullname = document.getElementById('fullname').value;
+    password = document.getElementById('password').value;
+    
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open("POST", "http://localhost:5000/signUp");
+    xmlHttp.setRequestHeader("Content-Type", "application/json");
+    xmlHttp.send(JSON.stringify({
+        "username": name,
+        "fullname" : fullname,
+        "email" : email,
+        "password" : password
+
+    }));
+
+    xmlHttp.onreadystatechange = function(){
+        console.log(this.response)
+        if(this.readyState == 4 && this.status == 201){
+            alert("Data Berhasil di Submit, code" + this.status);
+            window.location = "/login.html";
+        }
+        else if(this.readyState == 4){
+            alert("Data Email sudah terpakai" + this.status);
+        }
+    };
+}
+
+function signIn(){
+    
+    email = document.getElementById("email").value;
+    password = document.getElementById("password").value;
+
+    var xmlRequest = new XMLHttpRequest();
+    xmlRequest.open("POST", "http://localhost:5000/login");
+    xmlRequest.setRequestHeader("Content-Type","application/json");
+    xmlRequest.send(JSON.stringify({
+        "email": email,
+        "password": password
+    }));
+
+    xmlRequest.onreadystatechange = function(){
+        if(this.readyState == 4 && this.status == 200 && this.responseText == 1){
+            console.log(JSON.parse(this.response).email);
+
+            localStorage.setItem('email', email);
+            // localStorage.getItem('email');
+            window.location = "/twitter.html";
+        }
+        else if(this.readyState == 4){
+            alert("Login gagal! coba lagi !" + this.status);
+        }
+    };
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Login on Twiiter</title>
+    <link rel="icon" type="image/icon" href="gambar/twitter.png">
+    <link rel="stylesheet" type="text/css" href="css/style-login.css">
+    <script src="js/main.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <!-- navigasi -->
+        <ul>
+            <li><a href=""><img src="gambar/twitter.png" width="30px" height="30px"> Home</a></li>
+            <li><a href="">About</a></li>
+        </ul>
+    </header>
+
+    <!-- box login -->
+
+    <div id="box-login">
+
+        <form onsubmit="event.preventDefault(); signIn()">
+            <div id="box-form">
+
+                <h2>Login on Twitter</h2>
+                <p><input type="text" class="inputan" id="username" placeholder="username"></p>
+                <p><input type="password" class="inputan" id="password" placeholder="password"></p>
+
+                <button type="submit">Log in</button>
+
+                <input type="checkbox"> Remember me . <a href="">Forgot Password?</a>
+            </div>
+        </form>
+
+
+        <div id="box-footer">
+            <p>New to Twitter? <a href="signup.html"> Sign up now >></a></p><br>
+            <p>Already using Twitter via text message? <a href=""> Activate your account >></a></p>
+        </div>
+    </div>
+
+</body>
+
+</html>

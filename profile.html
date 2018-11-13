@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Twitter Profile</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Kumar+One" rel="stylesheet">
+    <link rel="icon" type="image/icon" href="gambar/twitter.png">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
+        crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="https://necolas.github.io/normalize.css/8.0.0/normalize.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+    <script src="js/main.js"></script>
+    <script>checkLogin()</script>
+</head>
+
+<body>
+
+    <header>
+        <!-- navigasi -->
+        <nav>
+            <!-- ini logo pake teks -->
+            <a href="twitter.html">
+                <img src="gambar/twitter.png" id="logo-twitter" alt="Twitter" height="25px" width="25px">
+            </a>
+            <ul>
+                <li><a href="twitter.html"><img src="gambar/hpme.png" alt="" height="15px" width="15px"> Beranda</a></li>
+                <li><a href="a"><img src="gambar/notif.png" alt="" height="15px" width="15px"> Notifikasi</a></li>
+                <li><a href="a"><img src="gambar/pesan.png" alt="" height="15px" width="15px"> Pesan</a></li>
+            </ul>
+
+            <form id="navigasi">
+                <input type="search" placeholder="  Search" id="Search">
+
+                <div class="dropdown">
+                    <img href="" src="gambar/profile.png" id="navprofil" class="dropbtn" alt="" id="little-image">
+                    <div class="dropdown-content">
+                        <a href="#" class="namaprofil" id="NAVname">Fahmi Prasetio
+                            <br>
+                            <span href="@fahmi_0532" class="namaprofil1" Id="NavUsername">@fahmi_0532</span>
+                        </a>
+                        <a href="editprofile.html">Setting and Privacy </a>
+                        <a href="#">Help Center</a>
+                        <a href="#" onclick="logout()">Log out</a>
+                    </div>
+                </div>
+
+                <button type="Tweeter" id="submittweet">Tweet </button>
+            </form>
+        </nav>
+    </header>
+    <!-- sampul image -->
+    <div class="sampulprofil">
+        <img src="gambar/dream.jpg" width="100%" alt="">
+    </div>
+    <!-- nav edit profile -->
+    <div class="Appcontainer">
+
+        <div id="ProfilenavbarImg">
+            <img href="" src="gambar/profile.png" id="Profil" width="100%" alt=""></div>
+
+        <div id="Profilenavbar">
+            <ul>
+                <li href="" class="summary-profile1">Tweet
+                    <br><a class="angka" id="totaltweet">0</a>
+                </li>
+                <li href="" class="summary-profile1">Following
+                    <br><a class="angka">0</a>
+                </li>
+                <li href="" class="summary-profile1">Followers
+                    <br><a class="angka">0</a>
+                </li>
+                <li href="" class="summary-profile1">Likes
+                    <br><a class="angka">0</a>
+                </li>
+                <li href="" class="summary-profile1">List
+                    <br><a class="angka">0</a>
+                </li>
+                <li href="" class="summary-profile1">Moments
+                    <br><a class="angka">0</a>
+                </li>
+            </ul>
+        </div>
+
+        <div id="Profilnavbutton">
+            <button type="Tweeter" id="editprofilesubmit">Edit Profile</button>
+        </div>
+
+    </div>
+
+    <!-- isi profile -->
+    <div class=profilcontainer>
+        <!-- bagian kiri -->
+        <div id="biodata">
+            <div>
+                <h1 class="ProfileHeaderName">
+                    <a href="" id="FullName">Fahmi Prasetio</a>
+                </h1>
+                <h2 class="ProfileHeadercardname">
+                    <span href="" id="UserName">@fahmi_0532</span>
+                </h2>
+                <div>
+                    <ul>
+                        <li class="">Biodata</li>
+                        <li class="biodataUser"><i class="fas fa-map-marker-alt"></i> Alamat</li>
+                        <li class="biodataUser"><i class="far fa-calendar-alt"></i> Joined October 2018</li>
+                        <a href=""><i class="far fa-image"></i> Photos and videos</a>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+        <!-- bagian tengah  -->
+        <div id="tweetTimeLine">
+            <!-- nav time line -->
+            <div id="headerTimeLine">
+                <ul>
+                    <li href="" class="">
+                        <a>Tweets</a>
+                    </li>
+                    <li href="" class="">
+                        <a>Tweets & replies</a>
+                    </li>
+                    <li href="" class="">
+                        <a>Media</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- timeline -->
+            <div href="" id=TimeLine>
+                <div id="tweetsfeed">
+                    <div class="tweet">
+                        <img src="gambar/imageT.png" class="TLprofil" alt="foto orang" height="35px" width="35px" />
+                        <h3 class="TLname">Nama <a class="Iduser">@Nama-User</a></h3>
+                        <video src="video/video1.mp4" controls id="video" alt="video"></video>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro, voluptates! Corrupti
+                            eos tempora cumque pariatur!</p>
+                        <span>13:24 - 23 oktober 2018 </span>
+                        <button type="submit" id="submit-tweet" class="TLdelete">Delete</button>
+                    </div>
+                </div>
+                <div id="streemEnd">
+                    <span href="" class="logo-logo"><i class="fab fa-earlybirds fa-2x"></i></span>
+                    <p href="" class="empyt-text">Back to Top <i class="fas fa-arrow-up"></i></p>
+                </div>
+
+            </div>
+        </div>
+        <!-- bagian kanan -->
+        <div id="rightmodule">
+            <div id="suggestion">
+                <!-- Friend suggestions -->
+                <div id="friendsuggestionProfile">
+                    <p>
+                        <h3 class="follow">Untuk Diikuti <a class="trend" href="Segarkan">Segarkan</a>.<a class="trend"
+                                href="Lihat Semua">Lihat Semua</a></h3>
+                    </p>
+                    <div id="box-follow">
+                        <div id="friendfollow">
+                            <img src="gambar/imageT.png" class="FF" alt="foto orang" />
+                            <h3 href="" class="TLname">Nama <a class="FFname">@Nama-User</a> </h3>
+                            <button type="submit" id="fffollow" class="TLname">Follow</button>
+                        </div>
+                    </div>
+                    <div id="friendfollow">
+                        <p href="" class="footsuggestion"><i class="fas fa-user-friends"></i>Temukan orang yang Anda
+                            kenal </p>
+                    </div>
+
+                </div>
+                <div class="wrapper">
+                    <section>
+                        <!-- kiri -->
+                        <div>
+                            <!-- trending -->
+                            <div id="trending-section-profile">
+                                <ul>
+                                    <a href="" class="trending">Trend Untuk Anda.<a href="" class="ubah">Ubah</a></a>
+                                    <li><a href="" class="hastag"># KompakDamaiIndonesiaku</a>
+                                        <br><a class=angka2>121.212 Tweet</a></li>
+                                    <li><a href="" class="hastag"># Indonesia Bersih</a>
+                                        <br><a class=angka2>84.970 Tweet</a></li>
+                                    <li><a href="" class="hastag"># DKIJakarta</a>
+                                        <br><a class=angka2>71.953 Tweet</a></li>
+                                    <li><a href="" class="hastag"># Kabupaten Kapuas Hulu</a>
+                                        <br><a class=angka2>70.873 Tweet</a></li>
+                                </ul>
+
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <div id="footer">
+                    <nav>
+                        <ul>
+                            <li id="copy-right"> &copy; 2018 Twitter</li>
+                            <li href="" class="bottom-nav1">Tentang</li>
+                            <li href="" class="bottom-nav1">Pusat Bantuan</li>
+                            <li href="" class="bottom-nav1">Persyaratan</li>
+                            <li href="" class="bottom-nav1">Kebijakan privasi</li>
+                            <li href="" class="bottom-nav1">Kuki</li>
+                            <li href="" class="bottom-nav1">Informasi iklan</li>
+                            <li href="" class="bottom-nav1">Merek</li>
+                            <li href="" class="bottom-nav1">Blog</li>
+                            <li href="" class="bottom-nav1">Status</li>
+                            <li href="" class="bottom-nav1">Aplikasi</li>
+                            <li href="" class="bottom-nav1">Karier</li>
+                            <li href="" class="bottom-nav1">Pemasaran</li>
+                            <li href="" class="bottom-nav1">Bisnis</li>
+                            <li href="" class="bottom-nav1">Pengembang</li>
+                        </ul>
+
+                    </nav>
+                    <p href="" class="iklan">Beriklan dengan Twitter</p>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            readPersonaltweet();
+            getfollowlist();
+            getMyUserProfile();
+            getMyUsernavbar();
+        </script>
+</body>
+
+</html>
